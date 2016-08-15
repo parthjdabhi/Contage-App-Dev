@@ -1,0 +1,6 @@
+framework module Pods_Connect_App {
+  umbrella header "Pods-Connect App-umbrella.h"
+
+  export *
+  module * { export * }
+}
