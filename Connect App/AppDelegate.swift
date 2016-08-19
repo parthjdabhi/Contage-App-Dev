@@ -35,6 +35,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         FIRApp.configure()
         
+//        try! FIRAuth.auth()?.signOut()
+//        AppState.sharedInstance.signedIn = false
+        
+        //Testing Signin ing with custom token
+        //FIRAuth.auth()?.signInWithCustomToken(<#T##token: String##String#>, completion: <#T##FIRAuthResultCallback?##FIRAuthResultCallback?##(FIRUser?, NSError?) -> Void#>)
+        //k7bcosGCU8cKHNbxhnV3Gzsw05r1
+//        FIRAuth.auth()?.signInWithCustomToken("k7bcosGCU8cKHNbxhnV3Gzsw05r1") { (user, error) in
+//            print(user)
+//            print(error)
+//        }
+        
         Batch.startWithAPIKey("DEV577B171987416C3DD0A5E0F8927")
         
         BatchPush.registerForRemoteNotifications()

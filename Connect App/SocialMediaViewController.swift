@@ -127,14 +127,11 @@ class SocialMediaViewController: UIViewController {
                 print("no linkedin data")
             }
         })
-
     }
     
     override func  preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
-    
-    
     
     func getFacebookUserInfo() {
         if(FBSDKAccessToken.currentAccessToken() != nil)

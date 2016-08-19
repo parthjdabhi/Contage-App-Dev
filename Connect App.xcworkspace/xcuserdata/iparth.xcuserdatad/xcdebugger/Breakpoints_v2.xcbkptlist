@@ -124,11 +124,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/AppDelegate.swift"
-            timestampString = "492772093.775604"
+            timestampString = "493309185.435604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "applicationHandleOpenURL(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -220,11 +220,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/PhotoViewController.swift"
-            timestampString = "492680049.759616"
+            timestampString = "493309185.435604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "imagePickerController(_:didFinishPickingImage:editingInfo:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -236,11 +236,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/PhotoViewController.swift"
-            timestampString = "492680300.31378"
+            timestampString = "493309331.670241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -268,11 +268,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/FirebaseSignInViewController.swift"
-            timestampString = "492694768.83139"
+            timestampString = "493313009.969305"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "facebookLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -284,11 +284,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/FirebaseSignInViewController.swift"
-            timestampString = "492694768.83139"
+            timestampString = "493131671.729551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "facebookLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -296,15 +296,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/FirebaseSignInViewController.swift"
-            timestampString = "492694768.83139"
+            timestampString = "493131671.729551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "facebookLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -312,46 +312,46 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/FirebaseSignInViewController.swift"
-            timestampString = "492694768.83139"
+            timestampString = "493131671.729551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "facebookLogin(_:)"
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Connect_App.FirebaseSignInViewController.facebookLogin (Swift.AnyObject) -&gt; ()"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Downloads/Contager-master/Connect%20App/FirebaseSignInViewController.swift"
-                  timestampString = "492775586.586071"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FirebaseSignInViewController.swift"
+                  timestampString = "493313010.659305"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "127"
-                  endingLineNumber = "127"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
                   offsetFromSymbolStart = "314">
                </Location>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Connect_App.FirebaseSignInViewController.(facebookLogin (Swift.AnyObject) -&gt; ()).(closure #1)"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Downloads/Contager-master/Connect%20App/FirebaseSignInViewController.swift"
-                  timestampString = "492775586.586617"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FirebaseSignInViewController.swift"
+                  timestampString = "493313010.659765"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
                   offsetFromSymbolStart = "23">
                </Location>
             </Locations>
@@ -396,11 +396,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/AppDelegate.swift"
-            timestampString = "492694133.923911"
+            timestampString = "493309185.435604"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -844,11 +844,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/PhotoViewController.swift"
-            timestampString = "492776304.966553"
+            timestampString = "493309331.670241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -872,7 +872,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/MainScreenViewController.swift"
@@ -915,6 +915,68 @@
             endingLineNumber = "33"
             landmarkName = "FriendSocialMediaViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Connect_App.FriendSocialMediaViewController.instagramId.getter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;"
+                  moduleName = "Connect App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
+                  timestampString = "493313010.669282"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Connect_App.FriendSocialMediaViewController.instagramId.setter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;"
+                  moduleName = "Connect App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
+                  timestampString = "493313010.66991"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Connect_App.FriendSocialMediaViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Connect_App.FriendSocialMediaViewController"
+                  moduleName = "Connect App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
+                  timestampString = "493313010.670342"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "780">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Connect_App.FriendSocialMediaViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Connect_App.FriendSocialMediaViewController&gt;"
+                  moduleName = "Connect App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
+                  timestampString = "493313010.673601"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "703">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -963,6 +1025,68 @@
             endingLineNumber = "30"
             landmarkName = "FriendProfileContentViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Connect_App.FriendProfileContentViewController.ref.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.FIRDatabaseReference&gt;"
+                  moduleName = "Connect App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
+                  timestampString = "493313010.679018"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Connect_App.FriendProfileContentViewController.ref.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.FIRDatabaseReference&gt;"
+                  moduleName = "Connect App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
+                  timestampString = "493313010.679198"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Connect_App.FriendProfileContentViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Connect_App.FriendProfileContentViewController"
+                  moduleName = "Connect App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
+                  timestampString = "493313010.679338"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "334">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Connect_App.FriendProfileContentViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Connect_App.FriendProfileContentViewController&gt;"
+                  moduleName = "Connect App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
+                  timestampString = "493313010.679483"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1010,22 +1134,6 @@
             startingLineNumber = "91"
             endingLineNumber = "91"
             landmarkName = "backButtonTapped(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Connect App/AddressBookViewController.swift"
-            timestampString = "492776345.365986"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "preferredStatusBarStyle()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1132,11 +1240,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SettingsViewController.swift"
-            timestampString = "492776401.900849"
+            timestampString = "493131671.729551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "createProfile(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1196,13 +1304,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SocialMediaViewController.swift"
-            timestampString = "492781980.950203"
+            timestampString = "492783006.702504"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "SocialMediaViewController"
-            landmarkType = "3">
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "getFacebookUserInfo()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1211,13 +1319,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Connect App/SocialMediaViewController.swift"
-            timestampString = "492783006.702504"
+            filePath = "Connect App/FirebaseSignInViewController.swift"
+            timestampString = "493313009.969305"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "getFacebookUserInfo()"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "twitterLogin(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Connect App/AppDelegate.swift"
+            timestampString = "493309185.435604"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

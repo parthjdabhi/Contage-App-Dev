@@ -52,6 +52,10 @@ let FTYPING_PATH = "Typing"//	Path name
 class AppState: NSObject {
     
     static let sharedInstance = AppState()
+    static var friendReqCount = 0
+    static var unreadConversionCount = 0
+    static var unreadMsgCount = 0
+    
     
     var signedIn = false
     var displayName: String?

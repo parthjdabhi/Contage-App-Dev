@@ -13,12 +13,39 @@ import SDWebImage
 
 class MainScreenViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet var friendRequests: UILabel!
+    @IBOutlet var lblFriendReqBadge: UILabel!
+    @IBOutlet var lblUnreadConBadge: UILabel!
     @IBOutlet var image1: UIImageView!
     var ref:FIRDatabaseReference!
     var user: FIRUser!
     
     override func viewDidLoad() {
+        
+        lblFriendReqBadge.backgroundColor = UIColor.redColor()
+        lblFriendReqBadge.layer.borderWidth = 1
+        lblFriendReqBadge.layer.masksToBounds = true
+        lblFriendReqBadge.layer.borderColor = UIColor.whiteColor().CGColor
+        lblFriendReqBadge.layer.cornerRadius = lblFriendReqBadge.frame.height/2
+        
+        if AppState.friendReqCount != 0 {
+            lblFriendReqBadge.text = String(format: "%d",AppState.friendReqCount)
+            lblFriendReqBadge.hidden = false
+        } else {
+            lblFriendReqBadge.hidden = true
+        }
+        
+        lblUnreadConBadge.backgroundColor = UIColor.redColor()
+        lblUnreadConBadge.layer.borderWidth = 1
+        lblUnreadConBadge.layer.masksToBounds = true
+        lblUnreadConBadge.layer.borderColor = UIColor.whiteColor().CGColor
+        lblUnreadConBadge.layer.cornerRadius = lblUnreadConBadge.frame.height/2
+        
+        if AppState.friendReqCount != 0 {
+            lblUnreadConBadge.text = String(format: "%d",AppState.friendReqCount)
+            lblUnreadConBadge.hidden = false
+        } else {
+            lblUnreadConBadge.hidden = true
+        }
         
         //try! FIRAuth.auth()?.signOut()
         
@@ -55,11 +82,6 @@ class MainScreenViewController: UIViewController, UIImagePickerControllerDelegat
         
         image1.layer.borderWidth = 2
         image1.layer.borderColor = UIColor.whiteColor().CGColor
-        
-        self.friendRequests.hidden = true
-        
-        //Mark check inbox
-        checkInbox()
     }
     
     /*
@@ -101,6 +123,110 @@ class MainScreenViewController: UIViewController, UIImagePickerControllerDelegat
         return UIStatusBarStyle.LightContent
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.updateFriendRequestsCount()
+        self.updateUnreadRecentChatsCount()
+    }
+    
+    func updateFriendRequestsCount() {
+        
+        if AppState.friendReqCount != 0 {
+            self.lblFriendReqBadge.text = String(format: "%d",AppState.friendReqCount)
+            self.lblFriendReqBadge.hidden = false
+        } else {
+            self.lblFriendReqBadge.hidden = true
+        }
+        
+        let userId = FIRAuth.auth()?.currentUser?.uid
+        let ref = self.ref.child("users").child(userId!).child("friendRequests")
+        
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            
+            AppState.friendReqCount = snapshot.children.allObjects.count
+            if AppState.friendReqCount != 0 {
+                self.lblFriendReqBadge.text = String(format: "%d",AppState.friendReqCount)
+                self.lblFriendReqBadge.hidden = false
+            } else {
+                self.lblFriendReqBadge.hidden = true
+            }
+            
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+    }
+    
+    
+    func updateUnreadRecentChatsCount() {
+        
+        let firstGroup = dispatch_group_create()
+        var recents: [AnyObject] = []
+        var recentIds: [AnyObject] = []
+        var unreadConversionCount = 0
+        var unreadMsgCount = 0
+        
+        let userID = FIRAuth.auth()?.currentUser?.uid ?? ""
+        let firebase: FIRDatabaseReference = FIRDatabase.database().referenceWithPath(FRECENT_PATH)
+        dispatch_group_enter(firstGroup)
+        firebase.queryOrderedByChild(FRECENT_USERID).queryEqualToValue(userID).observeSingleEventOfType(.Value, withBlock: {(snapshot: FIRDataSnapshot) -> Void in
+            if snapshot.exists() {
+                recents.removeAll()
+                //Sort array by dict[FRECENT_UPDATEDAT]
+                let enumerator = snapshot.children
+                while let rest = enumerator.nextObject() as? FIRDataSnapshot {
+                    print(rest.value)
+                    if let dic = rest.value as? [String:AnyObject] {
+                        print("Convesation : \(dic)")
+                        recents.append(dic)
+                        recentIds.append(dic[FRECENT_GROUPID] as? String ?? "")
+                        
+                        let GroupId = dic[FRECENT_GROUPID] as? String ?? ""
+                        let firebase2: FIRDatabaseReference = FIRDatabase.database().referenceWithPath(FMESSAGE_PATH).child(GroupId)
+                        
+                        
+                        let OppUserId = dic[FRECENT_OPPUSERID] as? String ?? ""
+                        dispatch_group_enter(firstGroup)
+                        
+                        firebase2.queryOrderedByChild(FMESSAGE_STATUS).queryEqualToValue(TEXT_DELIVERED).observeSingleEventOfType(.Value, withBlock: {(snapshot: FIRDataSnapshot) -> Void in
+                            if snapshot.exists() {
+                                print(snapshot.childrenCount)
+                                let enumerator = snapshot.children
+                                var UnreadMsgCount = 0
+                                while let rest = enumerator.nextObject() as? FIRDataSnapshot {
+                                    print("rest.key =>>  \(rest.key) =>>   \(rest.value)")
+                                    if var dic = rest.value as? [String:AnyObject] where (dic[FRECENT_USERID] as? String ?? "") ==  OppUserId {
+                                        print(rest.key)
+                                        print("Convesation : \(dic)")
+                                        UnreadMsgCount += 1
+                                    }
+                                }
+                                if UnreadMsgCount != 0 {
+                                    unreadConversionCount += 1
+                                    unreadMsgCount += UnreadMsgCount
+                                }
+                            }
+                            dispatch_group_leave(firstGroup)
+                        })
+                    }
+                }
+            }
+            dispatch_group_leave(firstGroup)
+            //createRecentObservers
+        })
+        
+        
+        dispatch_group_notify(firstGroup, dispatch_get_main_queue()) {
+            AppState.unreadConversionCount =  unreadConversionCount
+            AppState.unreadConversionCount =  unreadConversionCount
+            if AppState.unreadConversionCount != 0 {
+                self.lblUnreadConBadge.text = String(format: "%d",AppState.unreadConversionCount)
+                self.lblUnreadConBadge.hidden = false
+            } else {
+                self.lblUnreadConBadge.hidden = true
+            }
+        }
+    }
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         image1.image = image
         //self.dismissViewControllerAnimated(true, completion: nil);
@@ -129,26 +255,6 @@ class MainScreenViewController: UIViewController, UIImagePickerControllerDelegat
         
         let recentChatViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RecentChatViewController") as! RecentChatViewController!
         self.navigationController?.pushViewController(recentChatViewController, animated: true)
-        
-    }
-    
-    func checkInbox() -> Void {
-        let userId = FIRAuth.auth()?.currentUser?.uid
-        let ref = self.ref.child("users").child(userId!).child("friendRequests")
-        
-        ref.observeEventType(.Value, withBlock: { snapshot in
-            let count = snapshot.children.allObjects.count
-            self.friendRequests.text = String(count)
-            
-            if count > 0 {
-                self.friendRequests.hidden = false
-            } else {
-                self.friendRequests.hidden = true
-            }
-            }, withCancelBlock: { error in
-                print(error.description)
-        })
-        
         
     }
 }

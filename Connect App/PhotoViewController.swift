@@ -42,19 +42,33 @@ class PhotoViewController: UIViewController, UITextFieldDelegate, UINavigationCo
     }
     
     @IBAction func takePhoto(sender: AnyObject) {
+        
         // 1
         view.endEditing(true)
         
         // 2
         let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
                                                        message: nil, preferredStyle: .ActionSheet)
-        
+        // 3
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let cameraButton = UIAlertAction(title: "Take Photo",
+                                             style: .Default) { (alert) -> Void in
+                                                let imagePicker = UIImagePickerController()
+                                                imagePicker.delegate = self
+                                                imagePicker.sourceType = .Camera
+                                                self.presentViewController(imagePicker,
+                                                                           animated: true,
+                                                                           completion: nil)
+            }
+            imagePickerActionSheet.addAction(cameraButton)
+        }
+        // 4
         let libraryButton = UIAlertAction(title: "Choose Existing",
                                           style: .Default) { (alert) -> Void in
-                                            self.imagePickerController = UIImagePickerController()
-                                            self.imagePickerController.delegate = self
-                                            self.imagePickerController.sourceType = .PhotoLibrary
-                                            self.presentViewController(self.imagePickerController,
+                                            let imagePicker = UIImagePickerController()
+                                            imagePicker.delegate = self
+                                            imagePicker.sourceType = .PhotoLibrary
+                                            self.presentViewController(imagePicker,
                                                                        animated: true,
                                                                        completion: nil)
         }
@@ -65,7 +79,6 @@ class PhotoViewController: UIViewController, UITextFieldDelegate, UINavigationCo
         }
         imagePickerActionSheet.addAction(cancelButton)
         // 6
-
         presentViewController(imagePickerActionSheet, animated: true,
                               completion: nil)
         
@@ -77,6 +90,8 @@ class PhotoViewController: UIViewController, UITextFieldDelegate, UINavigationCo
         let base64String = self.imgToBase64(uploadImage)
         SignUpSocialViewController.picture = base64String as String
     }
+    
+    
     @IBAction func nextButton(sender: AnyObject) {
         
         if imgTaken == false {

@@ -122,6 +122,7 @@ class FirebaseSignInViewController: UIViewController {
     
     @IBAction func facebookLogin(sender: AnyObject) {
         
+        
         let manager = FBSDKLoginManager()
         CommonUtils.sharedUtils.showProgress(self.view, label: "Loading...")
         manager.logInWithReadPermissions(["public_profile", "email", "user_friends"], fromViewController: self) { (result, error) in
@@ -151,7 +152,19 @@ class FirebaseSignInViewController: UIViewController {
                                 print("Error: \(error)")
                             } else {
                                 print("fetched user: \(result)")
-                                self.ref.child("users").child(user!.uid).setValue(["facebookData": ["userId": result.valueForKey("id") as! String!, "userFirstName": result.valueForKey("first_name") as! String!, "userLastName": result.valueForKey("last_name") as! String!, "gender": result.valueForKey("gender") as! String!, "email": result.valueForKey("email") as! String!], "userFirstName": result.valueForKey("first_name") as! String!, "userLastName": result.valueForKey("last_name") as! String!, "email": result.valueForKey("email") as! String!])
+                                
+                                var facebookData = Dictionary<String, String>()
+                                facebookData["userId"] = result.valueForKey("id") as? String ?? ""
+                                facebookData["userFirstName"] = result.valueForKey("first_name") as? String ?? ""
+                                facebookData["userLastName"] = result.valueForKey("last_name") as? String ?? ""
+                                facebookData["gender"] = result.valueForKey("gender") as? String ?? ""
+                                facebookData["email"] = result.valueForKey("email") as? String ?? ""
+                                
+                                
+                                print("Facebook Integration Data : \(facebookData)")
+                                
+                                
+                                self.ref.child("users").child(user!.uid).setValue(["facebookData": facebookData, "userFirstName": result.valueForKey("first_name") as? String ?? "", "userLastName": result.valueForKey("last_name") as? String ?? "", "email": result.valueForKey("email") as? String ?? ""])
                                 if let picture = result.objectForKey("picture") {
                                     if let pictureData = picture.objectForKey("data"){
                                         if let pictureURL = pictureData.valueForKey("url") {

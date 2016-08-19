@@ -28,6 +28,17 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     var ref:FIRDatabaseReference!
     var user: FIRUser!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        friendRequests.backgroundColor = UIColor.redColor()
+        friendRequests.layer.borderWidth = 1
+        friendRequests.layer.masksToBounds = true
+        friendRequests.layer.borderColor = UIColor.whiteColor().CGColor
+        friendRequests.layer.cornerRadius = friendRequests.frame.height/2
+    }
+    
     override func viewDidAppear(animated: Bool) {
         ref = FIRDatabase.database().reference()
         user = FIRAuth.auth()?.currentUser
@@ -240,21 +251,29 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     }
     
     func checkInbox() -> Void {
-        let userId = FIRAuth.auth()?.currentUser?.uid
-        let ref = self.ref.child("users").child(userId!).child("friendRequests")
         
-        ref.observeEventType(.Value, withBlock: { snapshot in
-                let count = snapshot.children.allObjects.count
-                self.friendRequests.text = String(count)
-            
-                if count > 0 {
-                    self.friendRequests.hidden = false
-                } else {
-                    self.friendRequests.hidden = true
-                }
-            }, withCancelBlock: { error in
-                print(error.description)
-        })
+        if AppState.friendReqCount != 0 {
+            self.friendRequests.text = String(format: "%d",AppState.friendReqCount)
+            self.friendRequests.hidden = false
+        } else {
+            self.friendRequests.hidden = true
+        }
+        
+//        let userId = FIRAuth.auth()?.currentUser?.uid
+//        let ref = self.ref.child("users").child(userId!).child("friendRequests")
+//        
+//        ref.observeEventType(.Value, withBlock: { snapshot in
+//                let count = snapshot.children.allObjects.count
+//                self.friendRequests.text = String(count)
+//            
+//                if count > 0 {
+//                    self.friendRequests.hidden = false
+//                } else {
+//                    self.friendRequests.hidden = true
+//                }
+//            }, withCancelBlock: { error in
+//                print(error.description)
+//        })
         
         
     }
