@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         //Testing Signin ing with custom token
         //FIRAuth.auth()?.signInWithCustomToken(<#T##token: String##String#>, completion: <#T##FIRAuthResultCallback?##FIRAuthResultCallback?##(FIRUser?, NSError?) -> Void#>)
         //k7bcosGCU8cKHNbxhnV3Gzsw05r1
-//        FIRAuth.auth()?.signInWithCustomToken("k7bcosGCU8cKHNbxhnV3Gzsw05r1") { (user, error) in
+//    FIRAuth.auth()?.signInWithCustomToken("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhZG1pbiI6ZmFsc2UsImRlYnVnIjpmYWxzZSwiZCI6eyJ1aWQiOiJrN2Jjb3NHQ1U4Y0tITmJ4aG5WM0d6c3cwNXIxIn0sInYiOjAsImlhdCI6MTQ3MTY5OTcyNH0.v545te35unO4Fvh1cL7_mbdstylOhmclQtHpzHDiAqc") { (user, error) in
 //            print(user)
 //            print(error)
 //        }

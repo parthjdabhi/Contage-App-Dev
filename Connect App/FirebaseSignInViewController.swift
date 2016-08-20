@@ -163,8 +163,9 @@ class FirebaseSignInViewController: UIViewController {
                                 
                                 print("Facebook Integration Data : \(facebookData)")
                                 
+                                //userDetail["fbId"] = self.fbId
                                 
-                                self.ref.child("users").child(user!.uid).setValue(["facebookData": facebookData, "userFirstName": result.valueForKey("first_name") as? String ?? "", "userLastName": result.valueForKey("last_name") as? String ?? "", "email": result.valueForKey("email") as? String ?? ""])
+                                self.ref.child("users").child(user!.uid).setValue(["facebookData": facebookData, "fbId" :result.valueForKey("id") as? String ?? "", "userFirstName": result.valueForKey("first_name") as? String ?? "", "userLastName": result.valueForKey("last_name") as? String ?? "", "email": result.valueForKey("email") as? String ?? ""])
                                 if let picture = result.objectForKey("picture") {
                                     if let pictureData = picture.objectForKey("data"){
                                         if let pictureURL = pictureData.valueForKey("url") {

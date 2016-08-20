@@ -1,5 +1,5 @@
 //
-//  PrivateChatViewController.swift
+//  MyChatViewController.swift
 //  PokeTrainerApp
 //
 //  Created by iParth on 7/30/16.
@@ -8,6 +8,8 @@
 import UIKit
 import Firebase
 import JSQMessagesViewController
+import Alamofire
+
 
 class MyChatViewController: JSQMessagesViewController {
     
@@ -98,9 +100,12 @@ class MyChatViewController: JSQMessagesViewController {
         bubbleImageIncoming = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleLightGrayColor())
         
         self.topContentAdditionalInset = 44
-        
         self.inputToolbar.contentView.leftBarButtonItem = nil
         self.showLoadEarlierMessagesHeader = false
+        
+        JSQMessagesCollectionViewCell.registerMenuAction(#selector(MyChatViewController.spam(_:)))
+        JSQMessagesCollectionViewCell.registerMenuAction(#selector(MyChatViewController.reportUser(_:)))
+        UIMenuController.sharedMenuController().menuItems = [UIMenuItem.init(title: "Block", action: #selector(MyChatViewController.spam(_:))),UIMenuItem.init(title: "Report user", action: #selector(MyChatViewController.reportUser(_:)))]
         
         
         firebase1 = FIRDatabase.database().referenceWithPath(FMESSAGE_PATH).child(groupId!)
@@ -131,6 +136,227 @@ class MyChatViewController: JSQMessagesViewController {
     func handleTap(sender: UITapGestureRecognizer) {
         print("called swipe")
     }
+    
+    func didReviceMenuAction() {
+        print("didReviceMenuAction")
+    }
+    
+    func spam(sender: AnyObject?) {
+        print("Block user")
+    }
+    
+    func reportUser(sender: AnyObject?) {
+        print("Report user")
+    }
+    
+    
+    override func didReceiveMenuWillShowNotification(notification: NSNotification!) {
+        //let menu:UIMenuController? = notification.object as? UIMenuController
+        //menu?.menuItems = [UIMenuItem(title: "Block", action: #selector(MyChatViewController.spam(_:)))]
+        UIMenuController.sharedMenuController().menuItems = nil
+        UIMenuController.sharedMenuController().menuItems = [UIMenuItem(title: "Block", action: #selector(MyChatViewController.spam(_:)))]
+        UIMenuController.sharedMenuController().menuItems = [UIMenuItem.init(title: "Block", action: #selector(MyChatViewController.spam(_:))),UIMenuItem.init(title: "Report user", action: #selector(MyChatViewController.reportUser(_:)))]
+    }
+    
+    
+    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        let message = jsqmessages[indexPath.item]
+        if message.senderId == senderId {
+            return false
+        } else {
+            return true
+        }
+        //return false
+    }
+    
+    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
+        
+        let message = jsqmessages[indexPath.item]
+        if message.senderId == senderId {
+            return false
+        } else {
+            return (action == #selector(MyChatViewController.spam(_:))) || (action == #selector(MyChatViewController.reportUser(_:)))
+        }
+        //print(action)
+        //return action == #selector(MyChatViewController.spam(_:))
+        //return action == #selector(NSObject.copy(_:)) || action == #selector(MyChatViewController.spam(_:))
+    }
+    
+    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
+        if  action == #selector(MyChatViewController.spam(_:))
+        {
+            print("Block user")
+            //Remove recent chat
+            //Set Friend status to Zero
+            //Remove from friend list
+            
+            CommonUtils.sharedUtils.showProgress(self.view, label: "Blocking User..")
+            
+            let MyGroup = dispatch_group_create()
+            
+            //Remove Friends Id to my myfriend
+            dispatch_group_enter(MyGroup)
+            ref.child("users").child(senderId).child("friends").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                if let FriendReqUserDetail = snapshot.value!["friends"] as? [String: String] {
+                    
+                    var FilteredFriendReqUserDetail = [String: String]()
+                    var contained = false
+                    
+                    for (key,value) in FriendReqUserDetail {
+                        if value == self.OppUserId! {
+                            contained = true
+                            print("already friends")
+                        } else {
+                            FilteredFriendReqUserDetail[key] = value
+                        }
+                    }
+                    
+                    //let arrFriends =  NSMutableArray(array: FriendReqUserDetail.allValues)
+                    //print("\(self.UserID) :: \(arrFriendReqs)")
+                    
+                    if contained == true {
+                        dispatch_group_enter(MyGroup)
+                        self.ref.child("users").child(self.senderId).updateChildValues(["friends":FilteredFriendReqUserDetail]) { (error, reference) in
+                            
+                            if error == nil {
+                                print("successfully Removed MyUserID from their myFriends ")
+                            }else  {
+                                print("Faail to remove id From myFriends array")
+                            }
+                            dispatch_group_leave(MyGroup)
+                        }
+                    }
+                }
+                dispatch_group_leave(MyGroup)
+            })
+            
+            //Remove My user Id to Friends's myfriend
+            dispatch_group_enter(MyGroup)
+            ref.child("users").child(self.OppUserId!).child("friends").observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                if let FriendReqUserDetail = snapshot.value!["friends"] as? [String: String] {
+                    
+                    var FilteredFriendReqUserDetail = [String: String]()
+                    var contained = false
+                    
+                    for (key,value) in FriendReqUserDetail {
+                        if value == self.senderId! {
+                            contained = true
+                            print("already friends")
+                        } else {
+                            FilteredFriendReqUserDetail[key] = value
+                        }
+                    }
+                    
+                    //let arrFriends =  NSMutableArray(array: FriendReqUserDetail.allValues)
+                    //print("\(self.UserID) :: \(arrFriendReqs)")
+                    
+                    if contained == true {
+                        dispatch_group_enter(MyGroup)
+                        self.ref.child("users").child(self.OppUserId!).updateChildValues(["friends":FilteredFriendReqUserDetail]) { (error, reference) in
+                            
+                            if error == nil {
+                                print("successfully Removed MyUserID from their myFriends ")
+                            }else  {
+                                print("Faail to remove id From myFriends array")
+                            }
+                            dispatch_group_leave(MyGroup)
+                        }
+                    }
+                }
+                
+                dispatch_group_leave(MyGroup)
+            })
+            
+            //groupId
+            //Remove conversation messages
+            print("Removing groupId : \(groupId)")
+            self.ref.child(FMESSAGE_PATH).child(groupId!).removeValue()
+            
+            //Remove Recent Entries
+            let firebase: FIRDatabaseReference = FIRDatabase.database().referenceWithPath(FRECENT_PATH)
+            let query: FIRDatabaseQuery = firebase.queryOrderedByChild(FRECENT_GROUPID).queryEqualToValue(groupId)
+            dispatch_group_enter(MyGroup)
+            query.observeSingleEventOfType(.Value, withBlock: {(snapshot: FIRDataSnapshot) -> Void in
+                if snapshot.exists() {
+                    print(snapshot.childrenCount) // I got the expected number of items
+                    let enumerator = snapshot.children
+                    while let rest = enumerator.nextObject() as? FIRDataSnapshot {
+                        print(rest.key)
+                        print("Removing : \(rest.key)")
+                        self.ref.child(FRECENT_PATH).child(rest.key).removeValue()
+                    }
+                }
+                dispatch_group_leave(MyGroup)
+            })
+            
+            //self.FirRef?.child("users").child(self.MyUserID!).child("myFriends").child(self.MyUserID!).removeValue()
+            
+            dispatch_group_notify(MyGroup, dispatch_get_main_queue()) {
+                CommonUtils.sharedUtils.hideProgress()
+                
+                let MainScreenVC: MainScreenViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MainScreenViewController") as! MainScreenViewController
+                self.navigationController?.pushViewController(MainScreenVC, animated: true)
+            }
+        }
+        else if  action == #selector(MyChatViewController.reportUser(_:))
+        {
+            let message = messages[indexPath.item] as? [String:AnyObject] ?? [:]
+            
+            let userId = message[FMESSAGE_USERID] as? String ?? ""
+            let name = message[FMESSAGE_USER_NAME] as? String ?? ""
+            let date = (message[FMESSAGE_CREATEDAT] as? String ?? "").asDate
+            let text = message[FMESSAGE_TEXT] as? String ?? ""
+            
+            if userId == senderId {
+                //CANNOT BLOCK MY SELF
+                return
+            }
+            
+            //Messageid,userid,email and message text
+            
+            CommonUtils.sharedUtils.showProgress(self.view, label: "Submitting report..")
+            FIRDatabase.database().reference().child("users").child(userId).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+                
+                var email = ""
+                CommonUtils.sharedUtils.hideProgress()
+                
+                if let userInfo = snapshot.valueInExportFormat() as? NSDictionary {
+                    email = userInfo["email"] as? String ?? ""
+                }
+                
+                let message = "message Id : \(self.groupId ?? "") \n Message Text: \(text) Email  : \(email) (\(name)) \nSent By : \(self.senderId) on \(date) \nBlock Requset Sent by : \(FIRAuth.auth()?.currentUser?.uid ?? "") \n Reported on \(NSDate.init()) for personal chat"
+
+                //support@unitedpeoplespower.com
+                Alamofire.request(.GET, "http://www.unitedpeoplespower.com/contagerapp/api/reportUser.php", parameters: ["from": email ,"subject":"Request to block user in personal chat","message":message])
+                    .responseJSON { response in
+                        debugPrint(response.result.value)
+                        var msg = ""
+                        if let result = response.result.value as? NSDictionary
+                            where (result["result"] as? String ?? "") == "true"
+                        {
+                            msg = "Thank you, Your report submitted successfully. Our team will soon takes appropriate action."
+                        } else {
+                            msg = "Failed to submit report."
+                        }
+                        let sendMailErrorAlert = UIAlertView(title: "Message", message: msg , delegate: nil, cancelButtonTitle: "OK")
+                        sendMailErrorAlert.show()
+                }
+            })
+            
+        }
+    }
+    
+    override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
+        if action == #selector(MyChatViewController.spam(_:)) {
+            return true
+        }
+        else if action == #selector(MyChatViewController.reportUser(_:)) {
+            return true
+        }
+        return super.canPerformAction(action, withSender:sender)
+    }
+    
+    //-------- Fnish Block | Report user -----
     
     func insertMessages()
     {
@@ -234,7 +460,7 @@ class MyChatViewController: JSQMessagesViewController {
                 }})
         }
         
-        
+        cell.textView?.selectable = false
         
         return cell
     }

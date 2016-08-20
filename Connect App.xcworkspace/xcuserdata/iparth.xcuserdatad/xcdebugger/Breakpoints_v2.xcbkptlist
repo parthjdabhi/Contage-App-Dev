@@ -44,11 +44,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492676670.52264"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "facebookLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -60,11 +60,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492676670.52264"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "twitterLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -76,11 +76,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492778770.770125"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "linkedInLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -92,11 +92,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492778770.770125"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
             landmarkName = "createAccount(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -108,11 +108,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492778770.770125"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "createAccount(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -140,11 +140,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492778770.770125"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "instagramLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -156,11 +156,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492778770.770125"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "instagramLogin(_:)"
             landmarkType = "5">
             <Locations>
@@ -204,11 +204,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492678796.66871"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "twitterLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -252,11 +252,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492778770.770125"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
             landmarkName = "createAccount(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -268,11 +268,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/FirebaseSignInViewController.swift"
-            timestampString = "493313009.969305"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "facebookLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -332,7 +332,7 @@
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FirebaseSignInViewController.swift"
-                  timestampString = "493313010.659305"
+                  timestampString = "493394181.936423"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "128"
@@ -347,7 +347,7 @@
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FirebaseSignInViewController.swift"
-                  timestampString = "493313010.659765"
+                  timestampString = "493394181.936554"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "129"
@@ -364,11 +364,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492778770.770125"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "createAccount(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -924,7 +924,7 @@
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
-                  timestampString = "493313010.669282"
+                  timestampString = "493394181.93931"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -939,7 +939,7 @@
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
-                  timestampString = "493313010.66991"
+                  timestampString = "493394181.939445"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -954,7 +954,7 @@
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
-                  timestampString = "493313010.670342"
+                  timestampString = "493394181.939544"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -969,7 +969,7 @@
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
-                  timestampString = "493313010.673601"
+                  timestampString = "493394181.939665"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -1034,7 +1034,7 @@
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
-                  timestampString = "493313010.679018"
+                  timestampString = "493394181.943667"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -1049,7 +1049,7 @@
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
-                  timestampString = "493313010.679198"
+                  timestampString = "493394181.943838"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -1064,7 +1064,7 @@
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
-                  timestampString = "493313010.679338"
+                  timestampString = "493394181.943951"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -1079,7 +1079,7 @@
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
-                  timestampString = "493313010.679483"
+                  timestampString = "493394181.94407"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -1149,7 +1149,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
-            landmarkName = "backBtnTapped(_:)"
+            landmarkName = "preferredStatusBarStyle()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1256,11 +1256,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492778770.770125"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "instagramLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1272,11 +1272,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/SignUpSocialViewController.swift"
-            timestampString = "492778770.770125"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "instagramLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1320,11 +1320,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Connect App/FirebaseSignInViewController.swift"
-            timestampString = "493313009.969305"
+            timestampString = "493389549.110208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "twitterLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1335,13 +1335,61 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Connect App/AppDelegate.swift"
-            timestampString = "493309185.435604"
+            filePath = "Connect App/MyChatViewController.swift"
+            timestampString = "493394101.758316"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "collectionView(_:performAction:forItemAtIndexPath:withSender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Connect App/MyChatViewController.swift"
+            timestampString = "493394119.106534"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "collectionView(_:performAction:forItemAtIndexPath:withSender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Connect App/MyChatViewController.swift"
+            timestampString = "493394126.042544"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "303"
+            endingLineNumber = "303"
+            landmarkName = "collectionView(_:performAction:forItemAtIndexPath:withSender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Connect App/MyChatViewController.swift"
+            timestampString = "493394139.777983"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "collectionView(_:performAction:forItemAtIndexPath:withSender:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -25,4 +25,6 @@ target 'Connect App' do
     
     pod 'CryptoSwift', '~> 0.5'     # For MD5 Hash String (use when creates new personal chat)
     pod 'JSQMessagesViewController', '~> 7.3'
+    pod 'Alamofire', '~> 3.4'
+    
 end

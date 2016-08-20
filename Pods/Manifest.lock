@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Alamofire (3.4.1)
   - Batch (1.5.4)
   - Bolts (1.7.0):
     - Bolts/AppLinks (= 1.7.0)
@@ -115,6 +116,7 @@ PODS:
   - UICKeyChainStore (2.1.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.4)
   - Batch (~> 1.5)
   - CryptoSwift (~> 0.5)
   - CVCalendar (~> 1.2.9)
@@ -140,6 +142,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   Batch: 13083f81837fe1da9ea84b0533a2965c73ff74c6
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   CryptoSwift: c1ef79f901b86099a6fe8b3c7524cf9f3f3c8c40
@@ -174,6 +177,6 @@ SPEC CHECKSUMS:
   TwitterKit: 8a383da8d9c21b0423716381ea8bbfce20622d91
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
 
-PODFILE CHECKSUM: bc530b312f8e1692352d4e2ef79adffdb2aa8ffa
+PODFILE CHECKSUM: 699e442debb6a7887cb01e74482b4f95909b1b71
 
 COCOAPODS: 1.0.1

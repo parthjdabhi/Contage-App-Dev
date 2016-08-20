@@ -32,6 +32,12 @@ class SignUpSocialViewController: UIViewController {
     var instagramData: Dictionary<String, AnyObject>?
     var linkedinData: Dictionary<String, AnyObject>?
     
+    var fbId: String?
+    var twitterId: String?
+    var instagramId: String?
+    var linkedinId: String?
+    
+    
     var ref:FIRDatabaseReference!
     var user: FIRUser!
     
@@ -66,7 +72,7 @@ class SignUpSocialViewController: UIViewController {
                         print("Error: \(error)")
                     } else {
                         print("fetched user: \(result)")
-                        
+                        self.fbId = result.valueForKey("id") as? String
                         self.facebookData = ["userId": result.valueForKey("id") as? String ?? "","userFirstName": result.valueForKey("first_name") as? String ?? "", "userLastName": result.valueForKey("last_name") as? String ?? "", "gender": result.valueForKey("gender") as? String ?? "", "email": result.valueForKey("email") as? String ?? ""]
                         print("Facebook Integration Data : \(self.facebookData)")
                         
@@ -110,6 +116,7 @@ class SignUpSocialViewController: UIViewController {
                     let profile = try! NSJSONSerialization.JSONObjectWithData(data!, options: [])
                     print(profile)
                     
+                    self.twitterId = profile.valueForKey("id_str") as? String
                     self.twitterData = ["userId": profile.valueForKey("id_str")  as? String ?? "","userFirstName": profile.valueForKey("name") as? String ?? "", "userLastName": profile.valueForKey("screen_name") as? String ?? ""]
                     print("twitterData : \(self.twitterData)")
                     
@@ -163,6 +170,7 @@ class SignUpSocialViewController: UIViewController {
                         let jsonDict: AnyObject! = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
                         let mainDict = jsonDict.objectForKey("data") as! NSDictionary!
                         
+                        self.instagramId = mainDict?.valueForKey("id") as? String
                         self.instagramData = ["userId": mainDict?.valueForKey("id") as? String ?? "","fullName": mainDict?.valueForKey("full_name") as? String ?? "", "profile_picture": mainDict?.valueForKey("profile_picture") as? String ?? "", "username": mainDict?.valueForKey("username") as? String ?? ""]
                         print("instagramData : \(self.instagramData)")
                         
@@ -201,6 +209,8 @@ class SignUpSocialViewController: UIViewController {
                         print(dataString)
                         do {
                             let xmlDoc = try AEXMLDocument(xmlData: data)
+                            
+                            self.linkedinId = xmlDoc.root["id"].value
                             
                             self.linkedinData = Dictionary()
                             self.linkedinData?["userId"] = xmlDoc.root["id"].value ?? ""
@@ -271,15 +281,19 @@ class SignUpSocialViewController: UIViewController {
                     
                     if self.facebookData != nil {
                         userDetail["facebookData"] = self.facebookData
+                        userDetail["fbId"] = self.fbId
                     }
                     if self.twitterData != nil {
                         userDetail["twitterData"] = self.twitterData
+                        userDetail["twitterId"] = self.twitterId
                     }
                     if self.instagramData != nil {
                         userDetail["instagramData"] = self.instagramData
+                        userDetail["instagramId"] = self.instagramId
                     }
                     if self.linkedinData != nil {
                         userDetail["linkedinData"] = self.linkedinData
+                        userDetail["linkedinId"] = self.linkedinId
                     }
                     
                     print("userDetail : \(userDetail)")
