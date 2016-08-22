@@ -76,15 +76,15 @@ class SignUpSocialViewController: UIViewController {
                         self.facebookData = ["userId": result.valueForKey("id") as? String ?? "","userFirstName": result.valueForKey("first_name") as? String ?? "", "userLastName": result.valueForKey("last_name") as? String ?? "", "gender": result.valueForKey("gender") as? String ?? "", "email": result.valueForKey("email") as? String ?? ""]
                         print("Facebook Integration Data : \(self.facebookData)")
                         
-//                        self.ref.child("users").child(self.user!.uid).child("facebookData").setValue(["userId": result.valueForKey("id") as! String!,"userFirstName": result.valueForKey("first_name") as! String!, "userLastName": result.valueForKey("last_name") as! String!, "gender": result.valueForKey("gender") as! String!, "email": result.valueForKey("email") as! String!])
-//                        if let picture = result.objectForKey("picture") {
-//                            if let pictureData = picture.objectForKey("data"){
-//                                if let pictureURL = pictureData.valueForKey("url") {
-//                                    print(pictureURL)
-//                                    self.ref.child("users").child(self.user!.uid).child("facebookData").child("profilePhotoURL").setValue(pictureURL)
-//                                }
-//                            }
-//                        }
+                        self.ref.child("users").child(self.user!.uid).child("facebookData").setValue(["userId": result.valueForKey("id") as! String!,"userFirstName": result.valueForKey("first_name") as! String!, "userLastName": result.valueForKey("last_name") as! String!, "gender": result.valueForKey("gender") as! String!, "email": result.valueForKey("email") as! String!])
+                        if let picture = result.objectForKey("picture") {
+                            if let pictureData = picture.objectForKey("data"){
+                                if let pictureURL = pictureData.valueForKey("url") {
+                                    print(pictureURL)
+                                    self.ref.child("users").child(self.user!.uid).child("facebookData").child("profilePhotoURL").setValue(pictureURL)
+                                }
+                            }
+                        }
                         self.facebook.setTitle("Facebook Added", forState: .Normal)
                         self.facebook.enabled = false
                     }

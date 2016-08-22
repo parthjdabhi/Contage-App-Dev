@@ -160,7 +160,6 @@ class FirebaseSignInViewController: UIViewController {
                                 facebookData["gender"] = result.valueForKey("gender") as? String ?? ""
                                 facebookData["email"] = result.valueForKey("email") as? String ?? ""
                                 
-                                
                                 print("Facebook Integration Data : \(facebookData)")
                                 
                                 //userDetail["fbId"] = self.fbId
