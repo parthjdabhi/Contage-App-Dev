@@ -644,7 +644,6 @@
 				TargetAttributes = {
 					DA48CFFF1D175FB300C81161 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 67RKNLXTTN;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1013,7 +1012,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harloch.Contager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "66ae2d55-2e53-47e7-b78c-6fb0e3c89063";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Connect App/Bridging-Header.h";
 			};
@@ -1036,7 +1035,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harloch.Contager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "66ae2d55-2e53-47e7-b78c-6fb0e3c89063";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Connect App/Bridging-Header.h";
 			};

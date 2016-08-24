@@ -171,7 +171,7 @@ class SocialMediaViewController: UIViewController {
     @IBAction func facebookButton(sender: AnyObject) {
         UIApplication.tryURL([
             //"fb://profile/\(self.facebookId)", // App -- it seems to be not working now
-            "http://www.facebook.com/\(self.facebookId)" // Website if app fails
+            "http://www.facebook.com/app_scoped_user_id/\(self.facebookId)" // Website if app fails
             ])
 //        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "id, name, email"])
 //        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in

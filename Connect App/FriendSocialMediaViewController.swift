@@ -138,7 +138,8 @@ class FriendSocialMediaViewController: UIViewController {
     
     @IBAction func facebookButton(sender: AnyObject) {
         //let facebookAppURL = "fb://profile/" + facebookId
-        let facebookWebSiteURL = "http://www.facebook.com/" + facebookId
+        //https:// www.facebook.com/app_scoped_user_id/670839443061245
+        let facebookWebSiteURL = "http://www.facebook.com/app_scoped_user_id/" + facebookId
         UIApplication.tryURL([
             //facebookAppURL, // App url -- it might seems to be not working now
             facebookWebSiteURL // Website if app fails

@@ -331,13 +331,13 @@
                   symbolName = "Connect_App.FirebaseSignInViewController.facebookLogin (Swift.AnyObject) -&gt; ()"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FirebaseSignInViewController.swift"
-                  timestampString = "493547791.355215"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/3%20Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FirebaseSignInViewController.swift"
+                  timestampString = "493747152.450562"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "128"
                   endingLineNumber = "128"
-                  offsetFromSymbolStart = "314">
+                  offsetFromSymbolStart = "336">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -346,13 +346,13 @@
                   symbolName = "Connect_App.FirebaseSignInViewController.(facebookLogin (Swift.AnyObject) -&gt; ()).(closure #1)"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FirebaseSignInViewController.swift"
-                  timestampString = "493547791.355522"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/3%20Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FirebaseSignInViewController.swift"
+                  timestampString = "493747152.450854"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "129"
                   endingLineNumber = "129"
-                  offsetFromSymbolStart = "23">
+                  offsetFromSymbolStart = "28">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -923,13 +923,13 @@
                   symbolName = "Connect_App.FriendSocialMediaViewController.instagramId.getter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
-                  timestampString = "493547791.360428"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/3%20Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
+                  timestampString = "493747152.454011"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
                   endingLineNumber = "33"
-                  offsetFromSymbolStart = "80">
+                  offsetFromSymbolStart = "92">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -938,13 +938,13 @@
                   symbolName = "Connect_App.FriendSocialMediaViewController.instagramId.setter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
-                  timestampString = "493547791.360599"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/3%20Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
+                  timestampString = "493747152.454134"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
                   endingLineNumber = "33"
-                  offsetFromSymbolStart = "172">
+                  offsetFromSymbolStart = "196">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -953,13 +953,13 @@
                   symbolName = "Connect_App.FriendSocialMediaViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Connect_App.FriendSocialMediaViewController"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
-                  timestampString = "493547791.360748"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/3%20Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
+                  timestampString = "493747152.454252"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
                   endingLineNumber = "33"
-                  offsetFromSymbolStart = "780">
+                  offsetFromSymbolStart = "820">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -968,13 +968,13 @@
                   symbolName = "Connect_App.FriendSocialMediaViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Connect_App.FriendSocialMediaViewController&gt;"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
-                  timestampString = "493547791.360862"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/3%20Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendSocialMediaViewController.swift"
+                  timestampString = "493747152.454367"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
                   endingLineNumber = "33"
-                  offsetFromSymbolStart = "703">
+                  offsetFromSymbolStart = "776">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1033,13 +1033,13 @@
                   symbolName = "Connect_App.FriendProfileContentViewController.ref.getter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.FIRDatabaseReference&gt;"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
-                  timestampString = "493547791.363863"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/3%20Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
+                  timestampString = "493747152.456606"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "35">
+                  offsetFromSymbolStart = "48">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1048,13 +1048,13 @@
                   symbolName = "Connect_App.FriendProfileContentViewController.ref.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.FIRDatabaseReference&gt;"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
-                  timestampString = "493547791.36404"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/3%20Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
+                  timestampString = "493747152.45673"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "65">
+                  offsetFromSymbolStart = "76">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1063,13 +1063,13 @@
                   symbolName = "Connect_App.FriendProfileContentViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Connect_App.FriendProfileContentViewController"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
-                  timestampString = "493547791.364188"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/3%20Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
+                  timestampString = "493747152.456824"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "334">
+                  offsetFromSymbolStart = "436">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1078,13 +1078,13 @@
                   symbolName = "Connect_App.FriendProfileContentViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Connect_App.FriendProfileContentViewController&gt;"
                   moduleName = "Connect App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
-                  timestampString = "493547791.364324"
+                  urlString = "file:///Users/iparth/Desktop/iWork/Dustin%20Allen%20-%20Harloch/3%20Contager/Contager-master%2015%20Aug%20Start%20with/Connect%20App/FriendProfileContentViewController.swift"
+                  timestampString = "493747152.456912"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "284">
+                  offsetFromSymbolStart = "388">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1390,6 +1390,22 @@
             startingLineNumber = "185"
             endingLineNumber = "185"
             landmarkName = "collectionView(_:performAction:forItemAtIndexPath:withSender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Connect App/FriendSocialMediaViewController.swift"
+            timestampString = "493745873.370573"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "twitterButton(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
